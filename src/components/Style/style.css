@@ -127,8 +127,9 @@ header {
   .news-container {
     width: 70%;
     height: 100px;
-    display: block;
+    display: flex;
     justify-content: space-between;
+    float: left;
   }
   
   .new-container-img {
@@ -143,6 +144,22 @@ header {
     text-decoration: none;
     display: inline-block;
     border-radius: 10%;
+  }
+
+  .popular-container {
+    color: #cccccc;
+    width: 24%;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    padding: 3%;
+    float: left;
+  }
+
+  .populer-content {
+    width: 60%;
+    display: contents;
+    color: #333;
   }
   
   .slider-container {

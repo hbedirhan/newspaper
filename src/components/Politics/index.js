@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import Services from '../Services'
 
 function Politics() {
 
@@ -36,8 +37,10 @@ function Politics() {
                 <p>{p.publishedAt}</p>
               </div>
               )}
-
             </div>
+          </div>
+          <div className='popular-container'>
+          <Services/>
           </div>
         </div>
       </article>
