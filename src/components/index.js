@@ -8,6 +8,7 @@ import Business from './Business'
 import Health from './Health'
 import Entertainment from './Entertainment'
 import Sports from './Sports'
+import About from './About'
 
 
 function Index() {
@@ -39,6 +40,7 @@ function Index() {
               </ul>
             </nav>
         </div>
+        </header>
 
           <Routes>
           <Route exact path="/" element={<Home/>} />
@@ -48,10 +50,9 @@ function Index() {
           <Route path="/health" element={<Health/>} />
           <Route path="/entertainment" element={<Entertainment/>} />
           <Route path="/sports" element={<Sports/>} />
-          {/* <Route path="/about" element={<About/>} /> */}
-
+          <Route path="/about" element={<About/>} />
           </Routes>
-        </header>
+        
       </Router>
     </div>
   )

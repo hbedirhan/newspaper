@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import Services from '../Services'
 
 function Sports() {
 
@@ -38,6 +39,10 @@ function Sports() {
               )}
 
             </div>
+          </div>
+          <h2>Trending</h2>
+          <div className='popular-container'>
+          <Services/>
           </div>
         </div>
       </article>

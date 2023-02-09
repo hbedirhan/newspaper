@@ -121,7 +121,7 @@ header {
   .content-container {
     width: 80%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 10vh;
   }
   
   .news-container {
@@ -157,9 +157,26 @@ header {
   }
 
   .populer-content {
-    width: 60%;
-    display: contents;
+    width: 70%;
+    display: flexbox;
     color: #333;
+  }
+
+  .slick-prev,
+.slick-next
+{
+
+    margin: 100px;
+
+    color: #333;
+    border: none;
+    outline: #333;
+}
+
+  /* burdan slider başlangıcı */
+  .container {
+    display: flexbox;
+    background-color: #333;
   }
   
   .slider-container {
@@ -192,27 +209,97 @@ header {
     padding: 10px 20px;
     border-radius: 5px;
   }
-  
-  .slide-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
+
+
+  .cv-container {
+    width: 80%;
     display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 70px auto;
+    background-color: #f2f2f2;
+    color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
+
+  /* slider bitişi */
   
-  .slide-nav button {
-    background-color: #fff;
-    border: 0;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+  /* about başlangıç */
+  .cv-img {
+    margin-top: 10vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    color: #000;
-    cursor: pointer;
+    border: 10px;
+  }
+  
+  .cv-img img {
+    display: flex;
+    border-radius: 50%;
+  }
+  
+  .cv-container-box1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cv-container-box2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  
+  .cv-nav {
+    text-align: start;
+    --item-size: 22px;
+    --item-margin: 0 12px 0 0;
+    --item-display: inline-block;
+    width: 158px;
+    height: 22px;
+    position: relative;
+    margin: 0px 0px 10px calc((100% - 490px) * 0.5);
+    left: 166px;
+    grid-area: 7 / 1 / 8 / 2;
+    justify-self: start;
+    align-self: start;
+  }
+  
+  .cv-nav ul {
+    list-style: none;
+    height: 100%;
+    position: absolute;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .cv-nav ul>li {
+    display: var(--item-display);
+    height: var(--item-size);
+    margin: var(--item-margin);
+    width: var(--item-size); 
+  }
+  
+  .cv-about {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-text {
+    text-align: center;
+  }
+  
+  .cv-about ul {
+    list-style: none;
+  }
+  
+  .cv-about ul>li {
+    margin-top: 10px;
+  }
+  
+  .cv-about a {
+    color: #333;
+    text-align: center;
+    text-decoration: underline;
   }
