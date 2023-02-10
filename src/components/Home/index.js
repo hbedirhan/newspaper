@@ -1,19 +1,11 @@
-import {useEffect, useState} from 'react'
+import {useContext} from 'react'
 import Carousel from './carousel'
 import Services from '../Services'
-
-
+import NewsContext from '../NewsContext'
 
 function Home() {
 
-  const [headlines, setHeadlines] = useState([])
-
-  useEffect(() => {
-    fetch('https://newsapi.org/v2/top-headlines?country=tr&apiKey=18099a6a295e4ea59636644cd4dea747')
-    .then((res) => res.json())
-    .then((data) => setHeadlines(data.articles))
-
-  }, [])
+  const {headlines} = useContext(NewsContext)
 
   return (
     <div>

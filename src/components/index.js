@@ -1,5 +1,4 @@
 import './Style/style.css'
-import React from 'react'
 import { BrowserRouter as Router, NavLink, Routes, Route } from "react-router-dom";
 import Home from './Home'
 import Categories from './Categories'
@@ -9,11 +8,13 @@ import Health from './Health'
 import Entertainment from './Entertainment'
 import Sports from './Sports'
 import About from './About'
+import {NewsProvider} from './NewsContext'
 
 
 function Index() {
+
   return (
-    <div>
+    <NewsProvider>
       <Router>
         <header>
         <div className="header-container">
@@ -54,7 +55,7 @@ function Index() {
           </Routes>
         
       </Router>
-    </div>
+    </NewsProvider>
   )
 }
 

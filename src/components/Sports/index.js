@@ -1,21 +1,10 @@
-import {useEffect, useState} from 'react'
+import {useContext} from 'react'
 import Services from '../Services'
+import NewsContext from '../NewsContext'
 
 function Sports() {
 
-  const [sports, setSports] = useState([])
-
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-
-    fetch('https://newsapi.org/v2/top-headlines?country=tr&category=sports&apiKey=18099a6a295e4ea59636644cd4dea747')
-    .then((res) => res.json())
-    .then((data) => setSports(data.articles))
-    .catch((e) => console.log(e))
-    .finally(() => setLoading(false))
-
-  }, [])
+  const {sports, loading} = useContext(NewsContext)
 
   return (
     <div>
