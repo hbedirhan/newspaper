@@ -13,10 +13,10 @@ function Entertainment() {
           <p>CATEGORIES</p>
           <h2>Entertainment</h2>
           <div className="news-container">
-            <div>
+            <div className='news-content-container'>
               {loading && <h3>Yükleniyor...</h3>}
               {entertainment.map((e, i) => 
-              <div key={i}>
+              <div key={i} className='news-content'>
                 <h5>{e.title}</h5>
                 <div className="new-container-img">
                   <img src={`${e.urlToImage}`} alt="" width="200px" />
@@ -28,10 +28,10 @@ function Entertainment() {
               )}
 
             </div>
-          </div>
-          <h2>Trending</h2>
-          <div className='popular-container'>
-          <Services/>
+            <div className='popular-container'>
+              <h2 style={{margin:'0 auto'}}>Trending</h2>
+              <Services/>
+            </div>
           </div>
         </div>
       </article>

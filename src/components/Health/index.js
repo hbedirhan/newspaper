@@ -13,10 +13,10 @@ function Health() {
           <p>CATEGORIES</p>
           <h2>Health</h2>
           <div className="news-container">
-            <div>
+            <div className='news-content-container'>
               {loading && <h3>Yükleniyor...</h3>}
               {health.map((h, i) => 
-              <div key={i}>
+              <div key={i} className='news-content'>
                 <h5>{h.title}</h5>
                 <div className="new-container-img">
                   <img src={`${h.urlToImage}`} alt="" width="200px" />
@@ -28,10 +28,10 @@ function Health() {
               )}
 
             </div>
-          </div>
-          <h2>Trending</h2>
-          <div className='popular-container'>
-          <Services/>
+            <div className='popular-container'>
+              <h2 style={{margin:'0 auto'}}>Trending</h2>
+              <Services/>
+            </div>
           </div>
         </div>
       </article>

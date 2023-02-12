@@ -122,16 +122,28 @@ header {
     width: 80%;
     margin: auto;
     margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
   }
   
   .news-container {
-    width: 70%;
-    height: 100px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     float: left;
   }
-  
+
+  .news-content-container {
+    width: 70%;
+  }
+
+  .news-content {
+    margin-top: 50px;
+    padding: 1rem 0;
+    display: flow-root;
+    background-color: #f2f2f2;
+  }
+
   .new-container-img {
     float: right;
   }
@@ -147,22 +159,65 @@ header {
   }
 
   .popular-container {
-    color: #cccccc;
+    color: #333;
     width: 24%;
     display: flex;
-    justify-content: space-around;
-    height: 100px;
+    justify-content: unset;
+    flex-direction: column;
     padding: 3%;
     float: left;
   }
 
-  .populer-content {
+  .popular-container-content {
+    display: flex;
+    flex-direction: row;;
+  }
+
+  .popular-container h1 {
+    color: #cccccc;
+  }
+
+  .populer-text {
     width: 70%;
     display: flexbox;
     color: #333;
+    margin-left: 1rem;
   }
 
-  .slick-prev,
+  .card-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    float: left;
+    background-color: #f2f2f2;
+    padding: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+  
+.categories-navlink {
+  color: #333;
+  text-decoration: none;
+  width: min-content;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.categories-navlink h2 {
+  display: flex;
+  margin: 0;
+}
+
+.slick-prev,
 .slick-next
 {
 
@@ -209,22 +264,23 @@ header {
     padding: 10px 20px;
     border-radius: 5px;
   }
+  /* slider bitişi */
 
 
+  /* about başlangıç */
   .cv-container {
     width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 70px auto;
+    margin: auto;
+    margin-top: 10vh;
     background-color: #f2f2f2;
     color: #333;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
-  /* slider bitişi */
   
-  /* about başlangıç */
   .cv-img {
     margin-top: 10vh;
     display: flex;
