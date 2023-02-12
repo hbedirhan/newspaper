@@ -10,7 +10,7 @@ export const NewsProvider = ({children}) => {
   
     useEffect(() => {
   
-      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=health&apiKey=18099a6a295e4ea59636644cd4dea747')
+      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=health&apiKey=<your_api_key>')
       .then((res) => res.json())
       .then((data) => setHealth(data.articles))
       .catch((e) => console.log(e))
@@ -22,7 +22,7 @@ export const NewsProvider = ({children}) => {
   
     useEffect(() => {
   
-      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=business&apiKey=18099a6a295e4ea59636644cd4dea747')
+      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=business&apiKey=<your_api_key>')
       .then((res) => res.json())
       .then((data) => setBusiness(data.articles))
       .catch((e) => console.log(e))
@@ -34,7 +34,7 @@ export const NewsProvider = ({children}) => {
 
     useEffect(() => {
   
-      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=entertainment&apiKey=18099a6a295e4ea59636644cd4dea747')
+      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=entertainment&apiKey=<your_api_key>')
       .then((res) => res.json())
       .then((data) => setEntertainment(data.articles))
       .catch((e) => console.log(e))
@@ -45,7 +45,7 @@ export const NewsProvider = ({children}) => {
     const [headlines, setHeadlines] = useState([])
 
     useEffect(() => {
-      fetch('https://newsapi.org/v2/top-headlines?country=tr&apiKey=18099a6a295e4ea59636644cd4dea747')
+      fetch('https://newsapi.org/v2/top-headlines?country=tr&apiKey=<your_api_key>')
       .then((res) => res.json())
       .then((data) => setHeadlines(data.articles))
   
@@ -55,7 +55,7 @@ export const NewsProvider = ({children}) => {
 
     useEffect(() => {
   
-      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=politics&apiKey=18099a6a295e4ea59636644cd4dea747')
+      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=politics&apiKey=<your_api_key>')
       .then((res) => res.json())
       .then((data) => setPolitics(data.articles))
       .catch((e) => console.log(e))
@@ -67,7 +67,7 @@ export const NewsProvider = ({children}) => {
 
     useEffect(() => {
   
-      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=sports&apiKey=18099a6a295e4ea59636644cd4dea747')
+      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=sports&apiKey=<your_api_key>')
       .then((res) => res.json())
       .then((data) => setSports(data.articles))
       .catch((e) => console.log(e))
