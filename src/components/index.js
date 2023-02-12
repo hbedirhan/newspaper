@@ -14,7 +14,7 @@ import {NewsProvider} from './NewsContext'
 function Index() {
 
   return (
-    <NewsProvider>
+    
       <Router>
         <header>
         <div className="header-container">
@@ -42,7 +42,7 @@ function Index() {
             </nav>
         </div>
         </header>
-
+        <NewsProvider>
           <Routes>
           <Route exact path="/" element={<Home/>} />
           <Route path="/categories" element={<Categories/>} />
@@ -53,9 +53,9 @@ function Index() {
           <Route path="/sports" element={<Sports/>} />
           <Route path="/about" element={<About/>} />
           </Routes>
-        
+        </NewsProvider>
       </Router>
-    </NewsProvider>
+    
   )
 }
 

@@ -16,7 +16,7 @@ function Categories() {
               politics.slice(0,3).map((p, i) => 
               <div key={i} className='card'>
                 <div className="new-container-img">
-                  <img src={`${p.urlToImage}}`} alt="" width="100px" />
+                  <img src={`${p.urlToImage}`} alt="" width="100px" />
                 </div>
                 <h5>{p.title}</h5>
                 <p>{p.author}</p>
@@ -31,7 +31,7 @@ function Categories() {
               business.slice(0,3).map((b, i) => 
               <div key={i} className='card'>
                 <div className="new-container-img">
-                  <img src={`${b.urlToImage}}`} alt="" width="80px" />
+                  <img src={`${b.urlToImage}`} alt="" width="80px" />
                 </div>
                 <h5>{b.title}</h5>
                 <p>{b.author}</p>
@@ -46,7 +46,7 @@ function Categories() {
               health.slice(0,3).map((h, i) => 
               <div key={i} className='card'>
                 <div className="new-container-img">
-                  <img src={`${h.urlToImage}}`} alt="" width="80px" />
+                  <img src={`${h.urlToImage}`} alt="" width="80px" />
                 </div>
                 <h5>{h.title}</h5>
                 <p>{h.author}</p>
@@ -61,7 +61,7 @@ function Categories() {
               entertainment.slice(0,3).map((e, i) => 
               <div key={i} className='card'>
                 <div className="new-container-img">
-                  <img src={`${e.urlToImage}}`} alt="" width="80px" />
+                  <img src={`${e.urlToImage}`} alt="" width="80px" />
                 </div>
                 <h5>{e.title}</h5>
                 <p>{e.author}</p>
@@ -76,7 +76,7 @@ function Categories() {
               sports.slice(0,3).map((s, i) => 
               <div key={i} className='card'>
                 <div className="new-container-img">
-                  <img src={`${s.urlToImage}}`} alt="" width="80px" />
+                  <img src={`${s.urlToImage}`} alt="" width="80px" />
                 </div>
                 <h5>{s.title}</h5>
                 <p>{s.author}</p>
