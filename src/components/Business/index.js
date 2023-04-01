@@ -7,7 +7,7 @@ function Business() {
   const {business, loading} = useContext(NewsContext)
 
   return (
-    <div>
+    <>
       <article>
         <div className="content-container">
           <p>CATEGORIES</p>
@@ -23,7 +23,7 @@ function Business() {
                 </div>
                 <p>{b.description}</p>
                 <a href={`${b.url}`} target="_blank" rel="noopener noreferrer">Read More</a>
-                <p>{b.publishedAt}</p>
+                <p>{b.publishedAt.replace("T", " ").replaceAll("-", ".").replace("Z", "")}</p>
               </div>
               )}
 
@@ -35,7 +35,7 @@ function Business() {
           </div>
         </div>
       </article>
-    </div>
+    </>
   )
 }
 

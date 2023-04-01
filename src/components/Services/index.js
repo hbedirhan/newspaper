@@ -6,7 +6,7 @@ function Services() {
     const {headlines} = useContext(NewsContext)
 
   return (
-    <div>
+    <>
         {headlines.slice(0, 3).map((p, i) => 
             <div key={i} className='popular-container-content'>
               <h1 style={{margin:'auto'}}>0{i + 1}</h1>
@@ -16,7 +16,7 @@ function Services() {
                 </div>
             </div>
         )}
-    </div>
+    </>
   )
 }
 

@@ -7,7 +7,7 @@ function Politics() {
   const {politics, loading} = useContext(NewsContext)
 
   return (
-    <div>
+    <>
       <article>
         <div className="content-container">
           <p>CATEGORIES</p>
@@ -23,7 +23,7 @@ function Politics() {
                 </div>
                 <p>{p.description}</p>
                 <a href={`${p.url}`} target="_blank" rel="noopener noreferrer">Read More</a>
-                <p>{p.publishedAt}</p>
+                <p>{p.publishedAt.replace("T", " ").replaceAll("-", ".").replace("Z", "")}</p>
               </div>
               )}
             </div>
@@ -35,7 +35,7 @@ function Politics() {
           </div>
         </div>
       </article>
-    </div>
+    </>
   )
 }
 

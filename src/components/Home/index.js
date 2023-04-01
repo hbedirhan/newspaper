@@ -8,7 +8,7 @@ function Home() {
   const {headlines} = useContext(NewsContext)
 
   return (
-    <div>
+    <>
 
       <Carousel/>
 
@@ -25,7 +25,7 @@ function Home() {
                 </div>
                 <p>{h.description}</p>
                 <a href={`${h.url}`} target="_blank" rel="noopener noreferrer">Read More</a>
-                <p>{h.publishedAt}</p>
+                <p>{h.publishedAt.replace("T", " ").replaceAll("-", ".").replace("Z", "")}</p>
               </div>
               )}
             </div>
@@ -36,7 +36,7 @@ function Home() {
           </div>
         </div>
       </article>
-    </div>
+    </>
   )
 }
 

@@ -43,16 +43,16 @@ function About() {
                 <div className="cv-about">
                     <ul>
                     <li>
-                        En son react ile <a href="https://github.com/hbedirhan/Todo-list" target="_blank">todolist</a> yapmıştım. Html ve css kodlarını şablon olarak aldım. Ben sadece projenin react kodlarını yazdım.
+                        Burada react ile <a href="https://hbedirhan.github.io/weather-app/" target="_blank">weather app</a>. Sayfa ilk yüklendiği an konumdan hava durumu bilgilerini alıyor ve arattığımız şehrin hava durumu bilgilerini getiriyor.
+                    </li>
+                    <li>
+                        React ile yazdığım <a href="https://hbedirhan.github.io/todo-list/" target="_blank">todolist</a>. Html ve css kodlarını şablon olarak aldım. Ben sadece projenin react kodlarını yazdım.
                     </li>
                     <li>
                         Boostrap kullanarak <a href="https://github.com/hbedirhan/LinkedIn-clone" target="_blank">linkedin clone</a> yapmıştım. Boostrap kullanmayı responsive biraz uğraştırdığı için seviyorum. Yoksa tasarım yapmak hoşuma gidiyor.
                     </li>
                     <li>
                         Burada patikanın ödev olarak verdiği <a href="https://github.com/hbedirhan/New-Google/tree/main/css" target="_blank">google</a> projesi vardı. Çoğunluğu yapılmıştı fakat hataların giderilmesi ve bazı yapıların düzenlenmesi gerekiyordu onu yapmıştım.
-                    </li>
-                    <li>
-                        Html css yeni öğrenmeye başladığım ilk zamanlar yaptığım ilk proje <a href="https://github.com/hbedirhan/Old-Google" target="_blank">98 google</a> 
                     </li>
                     </ul>
                 </div>

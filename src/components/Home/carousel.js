@@ -17,7 +17,7 @@ function Carousel() {
         slidesToScroll: 1
       };
   return (
-    <div>
+    <>
 
     <Slider {...settings}>
     {
@@ -34,7 +34,7 @@ function Carousel() {
             </div>)
         }
     </Slider>
-    </div>
+    </>
   )
 }
 

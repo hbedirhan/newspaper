@@ -1,91 +1,85 @@
-import {createContext, useState, useEffect} from 'react'
+import { createContext, useState, useEffect } from 'react'
+import axios from 'axios';
 
 const NewsContext = createContext()
 
-export const NewsProvider = ({children}) => {
+export const NewsProvider = ({ children }) => {
 
-    const [loading, setLoading] = useState(true)
+  const apiKey = "18099a6a295e4ea59636644cd4dea747";
+
+  const [loading, setLoading] = useState(true);
+
+  const [health, setHealth] = useState([]);
+
+  useEffect(() => {
+    axios(`https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${apiKey}`)
+      .then((res) => setHealth(res.data.articles))
+      .catch((e) => console.log(e))
+      .finally(() => setLoading(false))
+  }, [])
+
+  const [business, setBusiness] = useState([])
+
+  useEffect(() => {
+    axios(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`)
+      .then((res) => setBusiness(res.data.articles))
+      .catch((e) => console.log(e))
+      .finally(() => setLoading(false))
+
+  }, [])
+
+  const [entertainment, setEntertainment] = useState([])
+
+  useEffect(() => {
+    axios(`https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=${apiKey}`)
+      .then((res) => setEntertainment(res.data.articles))
+      .catch((e) => console.log(e))
+      .finally(() => setLoading(false))
+
+  }, [])
+
+  const [headlines, setHeadlines] = useState([])
+
+  useEffect(() => {
+    axios(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`)
+      .then((res) => setHeadlines(res.data.articles))
+      .catch((e) => console.log(e))
+      .finally(() => setLoading(false))
+      
+    }, [])
     
-    const [health, setHealth] = useState([])
-  
-    useEffect(() => {
-  
-      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=health&apiKey=<your_api_key>')
-      .then((res) => res.json())
-      .then((data) => setHealth(data.articles))
+  const [politics, setPolitics] = useState([])
+
+
+  useEffect(() => {
+
+    axios(`https://newsapi.org/v2/top-headlines?country=us&category=politics&apiKey=${apiKey}`)
+      .then((res) => setPolitics(res.data.articles))
       .catch((e) => console.log(e))
       .finally(() => setLoading(false))
-  
-    }, [health])
+  }, [])
 
-    const [business, setBusiness] = useState([])
-  
-    useEffect(() => {
-  
-      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=business&apiKey=<your_api_key>')
-      .then((res) => res.json())
-      .then((data) => setBusiness(data.articles))
+  const [sports, setSports] = useState([])
+
+  useEffect(() => {
+    axios(`https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=${apiKey}`)
+      .then((res) => setSports(res.data.articles))
       .catch((e) => console.log(e))
       .finally(() => setLoading(false))
-  
-    }, [business])
 
-    const [entertainment, setEntertainment] = useState([])
+  }, [])
 
-    useEffect(() => {
-  
-      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=entertainment&apiKey=<your_api_key>')
-      .then((res) => res.json())
-      .then((data) => setEntertainment(data.articles))
-      .catch((e) => console.log(e))
-      .finally(() => setLoading(false))
-  
-    }, [entertainment])
+  const values = {
+    loading,
+    health,
+    business,
+    entertainment,
+    headlines,
+    politics,
+    sports
+  }
 
-    const [headlines, setHeadlines] = useState([])
-
-    useEffect(() => {
-      fetch('https://newsapi.org/v2/top-headlines?country=tr&apiKey=<your_api_key>')
-      .then((res) => res.json())
-      .then((data) => setHeadlines(data.articles))
-  
-    }, [headlines])
-
-    const [politics, setPolitics] = useState([])
-
-    useEffect(() => {
-  
-      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=politics&apiKey=<your_api_key>')
-      .then((res) => res.json())
-      .then((data) => setPolitics(data.articles))
-      .catch((e) => console.log(e))
-      .finally(() => setLoading(false))
-  
-    }, [politics])
-
-    const [sports, setSports] = useState([])
-
-    useEffect(() => {
-  
-      fetch('https://newsapi.org/v2/top-headlines?country=tr&category=sports&apiKey=<your_api_key>')
-      .then((res) => res.json())
-      .then((data) => setSports(data.articles))
-      .catch((e) => console.log(e))
-      .finally(() => setLoading(false))
-  
-    }, [sports])
-
-    const values = {
-        loading,
-        health,
-        business,
-        entertainment,
-        headlines,
-        politics,
-        sports
-    }
-
-    return <NewsContext.Provider value={values}>{children}</NewsContext.Provider>
+  return <NewsContext.Provider value={values}>{children}</NewsContext.Provider>
 }
 
 export default NewsContext

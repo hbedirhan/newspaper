@@ -1,10 +1,11 @@
+import React from "react";
 import Index from "./components";
 
 function App() {
   return (
-    <div>
+    <React.Fragment>
       <Index/>
-    </div>
+    </React.Fragment>
   );
 }
 

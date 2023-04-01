@@ -7,7 +7,7 @@ function Sports() {
   const {sports, loading} = useContext(NewsContext)
 
   return (
-    <div>
+    <>
       <article>
         <div className="content-container">
           <p>CATEGORIES</p>
@@ -23,7 +23,7 @@ function Sports() {
                 </div>
                 <p>{s.description}</p>
                 <a href={`${s.url}`} target="_blank" rel="noopener noreferrer">Read More</a>
-                <p>{s.publishedAt}</p>
+                <p>{s.publishedAt.replace("T", " ").replaceAll("-", ".").replace("Z", "")}</p>
               </div>
               )}
 
@@ -35,7 +35,7 @@ function Sports() {
           </div>
         </div>
       </article>
-    </div>
+    </>
   )
 }
 

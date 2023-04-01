@@ -7,7 +7,7 @@ function Health() {
   const {health, loading} = useContext(NewsContext)
 
   return (
-    <div>
+  <>
       <article>
         <div className="content-container">
           <p>CATEGORIES</p>
@@ -23,7 +23,7 @@ function Health() {
                 </div>
                 <p>{h.description}</p>
                 <a href={`${h.url}`} target="_blank" rel="noopener noreferrer">Read More</a>
-                <p>{h.publishedAt}</p>
+                <p>{h.publishedAt.replace("T", " ").replaceAll("-", ".").replace("Z", "")}</p>
               </div>
               )}
 
@@ -35,7 +35,7 @@ function Health() {
           </div>
         </div>
       </article>
-    </div>
+    </>
   )
 }
 

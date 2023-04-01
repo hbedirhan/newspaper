@@ -7,7 +7,7 @@ function Categories() {
   const {business, entertainment, health, politics, sports} = useContext(NewsContext)
 
   return (
-    <div>
+    <>
       <article>
         <div className='content-container'>
           <NavLink to='/politics' className='categories-navlink'><h2>Politics</h2></NavLink>
@@ -85,7 +85,7 @@ function Categories() {
           </div>
         </div>
       </article>
-    </div>
+    </>
   )
 }
 
