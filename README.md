@@ -9,6 +9,8 @@ Newspaper is a React application that displays news articles using the NewsAPI. 
 * React Router
 * React Slick
 
+## [Newspaper](https://hbedirhan.github.io/Newspaper/)
+
 ## Screenshots
 
 ![Home Page](src/screenshots/Newspaper%20-%20Home1.png)

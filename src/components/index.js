@@ -30,28 +30,28 @@ function Index() {
         
             <nav className="navbar">
               <ul>
-                <li><NavLink to="/">HOME</NavLink></li>
-                <li><NavLink to="/categories">CATEGORIES</NavLink></li>
-                <li><NavLink to="/politics">POLITICS</NavLink></li>
-                <li><NavLink to="/business">BUSINESS</NavLink></li>
-                <li><NavLink to="/health">HEALTH</NavLink></li>
-                <li><NavLink to="/entertainment">ENTERTAİNMENT</NavLink></li>
-                <li><NavLink to="/sports">SPORTS</NavLink></li>
-                <li><NavLink to="/about">ABOUT</NavLink></li>
+                <li><NavLink to="newspaper/">HOME</NavLink></li>
+                <li><NavLink to="newspaper/categories">CATEGORIES</NavLink></li>
+                <li><NavLink to="newspaper/politics">POLITICS</NavLink></li>
+                <li><NavLink to="newspaper/business">BUSINESS</NavLink></li>
+                <li><NavLink to="newspaper/health">HEALTH</NavLink></li>
+                <li><NavLink to="newspaper/entertainment">ENTERTAİNMENT</NavLink></li>
+                <li><NavLink to="newspaper/sports">SPORTS</NavLink></li>
+                <li><NavLink to="newspaper/about">ABOUT</NavLink></li>
               </ul>
             </nav>
         </div>
         </header>
         <NewsProvider>
           <Routes>
-          <Route exact path="/" element={<Home/>} />
-          <Route path="/categories" element={<Categories/>} />
-          <Route path="/politics" element={<Politics/>} />
-          <Route path="/business" element={<Business/>} />
-          <Route path="/health" element={<Health/>} />
-          <Route path="/entertainment" element={<Entertainment/>} />
-          <Route path="/sports" element={<Sports/>} />
-          <Route path="/about" element={<About/>} />
+          <Route exact path="newspaper/" element={<Home/>} />
+          <Route path="newspaper/categories" element={<Categories/>} />
+          <Route path="newspaper/politics" element={<Politics/>} />
+          <Route path="newspaper/business" element={<Business/>} />
+          <Route path="newspaper/health" element={<Health/>} />
+          <Route path="newspaper/entertainment" element={<Entertainment/>} />
+          <Route path="newspaper/sports" element={<Sports/>} />
+          <Route path="newspaper/about" element={<About/>} />
           </Routes>
         </NewsProvider>
       </Router>
